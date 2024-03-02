@@ -12,6 +12,7 @@ function inserirNomeEspera() {
     if (nome.trim() === ''){return;}
     nomeInput.value = '';
     inserirButton.disabled = true;
+    inserirButton.style.backgroundColor = "#306754";
     fetch('/inserirNomeEspera', {
         method: 'POST',
         headers: {
@@ -37,6 +38,7 @@ function inserirNomeEspera() {
     });
     setTimeout(function() {
         inserirButton.disabled = false;
+        inserirButton.style.backgroundColor = "#3b874c";
     }, 2000); 
 }
 

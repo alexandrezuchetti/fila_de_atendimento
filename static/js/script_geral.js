@@ -1,14 +1,20 @@
 window.onload = function() {
     atualizarGeral();
     const atualizacao_fila = setInterval(mostrarFilas(1), 30000);
-    const atualizacao_setores = setInterval(preencherDropDownSetores, 30000);
-
+    if (window.location.href.includes('plantonista')){
+    const intevaloAtualizaDropdownEspera = setInterval(preencherDropDownEspera, 30000);
+    const intevaloAtualizaDropdownAtendimentos = setInterval(preencherDropDownAtendimentos, 30000);
+    }
 }
 
 
 function atualizarBotao() {
     const s_id = document.getElementById('dropdownSetores').value
     mostrarFilas(s_id);
+    if (window.location.href.includes('plantonista')){
+        preencherDropDownEspera();
+        preencherDropDownAtendimentos();
+    }
 }
 
 
@@ -18,6 +24,10 @@ function atualizarGeral() {
         const s_id = document.getElementById('dropdownSetores').value
         console.log(s_id)
         mostrarFilas(s_id);
+        if (window.location.href.includes('plantonista')){
+            preencherDropDownEspera();
+            preencherDropDownAtendimentos();
+        }
     }).catch(function(error) {
         console.error('Error:', error);
     });
