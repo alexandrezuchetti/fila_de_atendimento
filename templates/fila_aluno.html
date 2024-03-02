@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila de Atendimento</title>
+    <link rel="stylesheet" href="\static\css\styles_aluno.css">
+    <link rel="stylesheet" href="\static\css\styles_geral.css">
+</head>
+<body>
+    <div id="containerInserirNome" class="input-container">
+    <br>
+    <input type="text" id="nomeInput" placeholder="Seu nome">
+    <select id="dropdownSetores" class="dropdown-fila" onchange="atualizarBotao()"></select>
+    <button onclick="inserirNomeEspera()" id="inserirButton" class="control-button">Adicionar à fila</button>
+    <button onclick="atualizarBotao()" id="atualizarButton" class="control-button">Atualizar</button>
+    
+    <h2 id="retornoInserir" class="retorno-text"><h2>
+    </div>
+    <div id="containerTabelas">
+        <table id="esperaTable" class="data-table">
+        <thead>
+         <tr>
+            <th>Em espera</th>
+         </tr>
+        </thead>
+    <tbody></tbody>
+    </table>
+    <table id="atendimentoTable" class="data-table">
+        <thead>
+         <tr>
+            <th>Em atendimento</th>
+         </tr>
+        </thead>
+    <tbody></tbody>
+    </table>
+    </div>
+
+    <script src="\static\js\script_aluno.js"></script>
+    <script src="\static\js\script_geral.js"></script>
+</body>
+</html>

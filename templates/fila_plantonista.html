@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Atendimento</title>
+    <link rel="stylesheet" href="\static\css\styles_plantonista.css">
+    <link rel="stylesheet" href="\static\css\styles_geral.css">
+</head>
+<body>
+    <div id="containerControle" class="input-container">
+        <button onclick="atualizaDadosPlantonista()" id="atualizarButton" class="control-button">Atualizar</button>
+        <button onclick="limparFilaEspera()" id="limparButtonEspera" class="control-button">Limpar fila de espera</button>
+        <button onclick="limparFilaAtendimento()" id="limparButtonAtendimento" class="control-button">Limpar fila de atendimento</button>
+        <br>
+        <br>
+        <select id="dropdownSetores" class="dropdown-fila" onchange="atualizarBotao()"></select>
+        
+    </div>
+        <div id="containerAtendimentos" class="input-container">
+        <select id="dropdownEspera" class="dropdown-fila"></select>
+        <input id="inputPlantonista" placeholder="Nome Plantonista">
+        <button onclick="capturarAluno()" id="capturarAlunoButton" class="control-button">Capturar aluno</button>
+        <select id="dropdownAtendimento" class="dropdown-fila"></select>
+        <button onclick="iniciarAtendimento()" id="iniciarAtendimentoButton" class="control-button">Iniciar atendimento</button>
+        <br>
+        <br>
+        <select id="dropdownEmAtendimento" class="dropdown-fila"></select>
+        <button onclick="finalizarAtendimento()" id="finalizarAtendimentoButton" class="control-button">Finalizar atendimento</button>
+        <br>
+        <h2 id="retornoControle"  class="retorno-text"></h2>
+    </div>
+
+    
+    <br>
+    <div id="containerTabelas">
+        <table id="esperaTable" class="data-table">
+        <thead>
+         <tr>
+            <th>Em espera</th>
+         </tr>
+        </thead>
+    <tbody></tbody>
+    </table>
+    <table id="atendimentoTable" class="data-table">
+        <thead>
+         <tr>
+            <th>Em atendimento</th>
+         </tr>
+        </thead>
+    <tbody></tbody>
+    </table>
+    </div>
+    <script src="\static\js\script_plantonista.js"></script>
+    <script src="\static\js\script_geral.js"></script>
+</body>
+</html>

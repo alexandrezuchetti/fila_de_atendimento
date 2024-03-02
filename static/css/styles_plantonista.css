@@ -1,0 +1,11 @@
+#dropdownAtendimento,
+#dropdownEmAtendimento {
+    position: fixed;
+    right: 20px;
+}
+
+#iniciarAtendimentoButton,
+#finalizarAtendimentoButton{
+    position: fixed;
+    right: 230px;
+}

@@ -1,0 +1,66 @@
+#containerTabelas {
+    display: flex;
+    border: 1px solid #ccc; /* Add a solid border */
+    padding: 10px; /* Add some padding for spacing */
+    margin-bottom: 20px; /* Add margin to create space between containers */
+}
+
+.button-container {
+    margin-bottom: 10px;
+}
+
+.dropdown-fila{
+    width: 200px;
+    padding: 8px; /* Add padding */
+    margin-right: 10px; /* Add some margin */
+    border: 1px solid #306754; /* Dark green border */
+    border-radius: 5px; /* Add border radius */
+}
+
+
+.input-container {
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Add a solid border */
+    padding: 10px; /* Add some padding for spacing */
+    margin-bottom: 20px; /* Add margin to create space between containers */
+    height: 90px;
+    border-bottom: 2px solid #306754;
+    background-color: #9bc89e; /* Medium green */
+    border-top: 2px solid #306754;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add margin to the top */
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #9bc89e; /* Medium green border */
+    padding: 10px; /* Add padding */
+    text-align: left; /* Align text to the left */
+}
+
+.data-table th {
+    background-color: #3b874c; /* Dark green */
+    color: white; /* Text color */
+}
+
+body {
+    background-color: #f0f9f4; /* Light green */
+    font-family: Arial, sans-serif; /* Specify a font */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.control-button {
+    background-color: #3b874c; /* Dark green */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Add some padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    margin-right: 10px; /* Add some margin between buttons */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
