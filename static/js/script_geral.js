@@ -34,7 +34,7 @@ function atualizarGeral() {
 }
 
 function mostrarFilas(id) {
-    //pra isso aqui da pra fazer algo recursivo pras duas filas, depois tem que fazer
+    
 
     fetch('/filaEspera', {
         method: 'POST',

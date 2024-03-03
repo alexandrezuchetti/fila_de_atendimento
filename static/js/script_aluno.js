@@ -1,4 +1,4 @@
-//SCRIPTS PARA INSERIR NOME NA FILA
+
 window.onload = function() {
     atualizarGeral();
 }
