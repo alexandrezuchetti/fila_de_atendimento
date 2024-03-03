@@ -37,7 +37,7 @@ def getSetores():
 @app.route('/inserirNomeEspera', methods=['POST'])
 def inserirNomeEspera():
     nome = request.json.get('nome')
-    id_setor = request.json.get('id') #validar as coisa e tal
+    id_setor = request.json.get('id') 
     nome = unidecode(nome)
     with engine.begin() as conn:
         conn.execute(sqlalchemy.text(f'CALL inserirNomeEspera(:nome, :id_setor);').bindparams(nome=nome, id_setor=id_setor))
@@ -46,14 +46,14 @@ def inserirNomeEspera():
 
 @app.route('/iniciarAtendimento', methods=['POST'])
 def iniciarAtendimento():
-    id = request.json.get('id') #validar as coisa e tal
+    id = request.json.get('id') 
     with engine.begin() as conn:
         conn.execute(sqlalchemy.text(f'CALL iniciarAtendimento(:id);').bindparams(id=id))
     return jsonify({'message': f'Atendimento {id} iniciado!'})
 
 @app.route('/finalizarAtendimento', methods=['POST'])
 def finalizarAtendimento():
-    id = request.json.get('id') #validar as coisa e tal
+    id = request.json.get('id') 
     with engine.begin() as conn:
         conn.execute(sqlalchemy.text(f'CALL finalizarAtendimento(:id);').bindparams(id=id))
     return jsonify({'message': f'Atendimento {id} finalizado!'})
@@ -67,7 +67,7 @@ def limpa_fila_espera():
 
 @app.route('/capturarAluno', methods=['POST'])
 def capturarAluno():
-    id = request.json.get('id') #validar as coisa e tal
+    id = request.json.get('id') 
     plantonista = request.json.get('plantonista')
     plantonista = unidecode(plantonista)
     aluno = request.json.get('aluno')

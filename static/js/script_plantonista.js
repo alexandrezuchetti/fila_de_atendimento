@@ -10,8 +10,8 @@ function limparFilaEspera(){
         headers: {
             'Content-Type': 'application/json'
         },
-        //algum tipo de log, ou até negação com base em alguma caracteristica do envio.
-        //a principio assume-se que vamos pegar mac
+        
+        
         body: JSON.stringify({})
     })
     .then(response => response.json())
@@ -38,8 +38,8 @@ function limparFilaAtendimento(){
         headers: {
             'Content-Type': 'application/json'
         },
-        //algum tipo de log, ou até negação com base em alguma caracteristica do envio.
-        //a principio assume-se que vamos pegar mac
+        
+        
         body: JSON.stringify({})
     })
     .then(response => response.json())
